@@ -1,0 +1,42 @@
+.content {
+
+
+    @include mobile {
+        .container {
+            padding: 0;
+        }
+    }
+}
+
+.content__grid {
+    display: grid;
+    grid-template-areas: "main aside";
+    grid-template-columns: 3fr 1fr; /* Two columns: main content (2 parts), aside (1 part) */
+    grid-template-rows: auto; /* Adjust row sizes */
+    gap: 24px;
+    width: 100%;
+
+    @media (max-width: 1160px) {
+        
+        grid-template-areas: "main" "aside";
+        grid-template-columns: 1fr; /* Two columns: main content (2 parts), aside (1 part) */
+        grid-template-rows: auto auto; /* Adjust row sizes */
+    } 
+}
+
+.main {
+    grid-area: main;
+}
+
+.aside {
+    grid-area: aside;
+
+    @media (max-width: 1160px) {
+        
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+}
