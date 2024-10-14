@@ -1,0 +1,45 @@
+.header {
+	background-color: #fff;
+	padding: 8px 0;
+    position: sticky;
+    top: 0;
+    z-index: 3333;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+    .logo {
+        height: 40px;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+
+        @include tablet {
+            height: 18px;
+        }
+    }
+
+    
+    @include tablet {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.nav__list {
+    li:nth-child(1), li:nth-child(2) {
+        @include tablet {
+            display: none;
+        }
+    }
+    li:nth-child(3) > a > span {
+        @include tablet {
+            display: none;
+        }
+    }
+}
+

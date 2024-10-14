@@ -1,0 +1,23 @@
+:root {
+	--container-width: 1140px;
+	--container-padding: 12px;
+
+	--font-main: 'OpenSans', sans-serif;
+	--font-accent: 'OpenSans', sans-serif;
+	--font-titles: var(--font-accent);
+
+	--page-bg: #F5F5F5;
+	--text-color: #000;
+	--accent: #ac182c;
+	--link-color: #2578c8;
+
+
+    --laptop-size: 1140px;
+	--tablet-size: 768px;
+	--mobile-size: 480px;
+}
+
+.dark {
+    --page-bg: #252526;
+    --text-color: #fff;
+}
